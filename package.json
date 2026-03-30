@@ -1,0 +1,15 @@
+{
+  "name": "ai-decision-simulator",
+  "version": "1.0.0",
+  "description": "Root package to run both frontend and backend in a single command",
+  "scripts": {
+    "install-all": "cd frontend && npm install && cd ../backend && pip install -r requirements.txt",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "cd frontend && npm start",
+    "server": "cd backend && python app.py",
+    "build": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
